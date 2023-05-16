@@ -92,11 +92,17 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/Cadastro_Alunos/"
+          }
         }
       }
+    },
+    "cli": {
+      "analytics": "ac14dd5d-7f62-4ea6-869f-9258a87a72b3"
     }
-  },
-  "cli": {
-    "analytics": "ac14dd5d-7f62-4ea6-869f-9258a87a72b3"
   }
 }
