@@ -56,7 +56,6 @@ export class AlunoComponent implements OnInit {
       }
     )
   }
-
 }
 
 
