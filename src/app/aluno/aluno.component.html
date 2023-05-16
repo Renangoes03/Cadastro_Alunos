@@ -1,27 +1,9 @@
-<div class="row">
-   <div class="col-8 m-auto">
-      <form  [formGroup]="formGroupClient">
-        <div class="mb-3">
-          <label for="name" class="form-label">Nome: </label>
-          <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
-        </div>
-
-        <div class="mb-3">
-          <label for="email" class="form-label">Email: </label>
-          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
-        </div>
-        <div class="mb-3 d-flex justify-content-end">
-            <button class="btn btn-primary"  (click)="Salvar()">Salvar</button> 
-        </div>
-      </form>
-   </div>
-</div>
 
 <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
+        <th scope="col">Nome</th>
         <th scope="col">Email</th>
         <th scope="col">Série</th>
         <th scope="col">Período</th>
@@ -30,14 +12,50 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let Aluno of aluno">
-        <th scope="row">{{Aluno.ID}}</th>
-        <td>{{Aluno.Nome}}</td>
-        <td>{{Aluno.Email}}</td>
-        <td>{{Aluno.Serie}}</td>
-        <td>{{Aluno.Periodo}}</td>
-        <td>{{Aluno.Nota}}</td>
-        <td>{{Aluno.Situacao}}</td>
+      <tr *ngFor="let aluno of alunos">
+        <th scope="row">{{aluno.id}}</th>
+        <td>{{aluno.nome}}</td>
+        <td>{{aluno.email}}</td>
+        <td>{{aluno.serie}}</td>
+        <td>{{aluno.periodo}}</td>
+        <td>{{aluno.nota}}</td>
+        <td>{{aluno.situacao}}</td>
       </tr>
     </tbody>
 </table>
+<div class="row">
+  <div class="col-3 m-auto">
+     <form  [formGroup]="formGroupClient">
+       <div class="mb-3">
+         <label for="name" class="form-label">Nome: </label>
+         <input type="text" formControlName="nome" class="form-control" id="nome" placeholder="Nome">
+       </div>
+
+       <div class="mb-3">
+         <label for="email" class="form-label">Email: </label>
+         <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+       </div>
+       <div class="col-3">
+       <div class="mb-4">
+         <label for="email" class="form-label">Série: </label>
+         <input type="email" formControlName="serie" class="form-control" id="serie" placeholder="Série">
+       </div>
+       <div class="mb-4">
+         <label for="email" class="form-label">Periodo: </label>
+         <input type="text" formControlName="periodo" class="form-control" id="periodo" placeholder="periodo">
+       </div>
+       <div class="mb-4">
+         <label for="email" class="form-label">Nota: </label>
+         <input type="text" formControlName="nota" class="form-control" id="nota" placeholder="Nota">
+       </div>
+       <div class="mb-4">
+         <label for="email" class="form-label">Situação: </label>
+         <input type="text" formControlName="situacao" class="form-control" id="situacao" placeholder="Situação">
+       </div>
+      </div>
+       <div class="mb-3 d-flex justify-content-end">
+           <button class="btn btn-primary"  (click)="salvar()">Salvar</button> 
+       </div>
+     </form>
+  </div>
+</div>

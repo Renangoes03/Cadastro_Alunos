@@ -8,6 +8,8 @@ import { Aluno } from './aluno';
 })
 export class AlunoService {
 
+  
+
   url = "http://localhost:3000/Alunos";
 
    constructor(private http: HttpClient) { }
@@ -16,7 +18,9 @@ export class AlunoService {
   getAluno(): Observable<Aluno[]> {
       return this.http.get<Aluno[]>(this.url);
   }
-   Salvar(Aluno: Aluno): Observable<Aluno> {
+
+  salvar(Aluno: Aluno): Observable<Aluno> {
     return this.http.post<Aluno>(this.url, Aluno);
+
   }
 }

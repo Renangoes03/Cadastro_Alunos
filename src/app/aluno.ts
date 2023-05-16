@@ -1,9 +1,9 @@
 export interface Aluno{
-    ID : number,
-    Nome : string,
-    Email : string,
-    Serie : string,
-    Periodo : string,
-    Nota : number,
-    Situacao : string
+    id : number,
+    nome : string,
+    email : string,
+    serie : string,
+    periodo : string,
+    nota : number,
+    situacao : string
 }

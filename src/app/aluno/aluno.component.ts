@@ -10,7 +10,7 @@ import { Aluno } from '../aluno';
 })
 export class AlunoComponent implements OnInit {
 
-  aluno: Aluno[] = [];
+  alunos: Aluno[] = [];
   formGroupClient: FormGroup;
 
   constructor(private alunoService: AlunoService,
@@ -18,13 +18,13 @@ export class AlunoComponent implements OnInit {
   ) {
 
     this.formGroupClient = formBuilder.group({
-      ID: [''],
-      Nome: [''],
-      Email: [''],
-      Série: [''],
-      Periodo: [''],
-      Nota: [''],
-      Situacao: [''],
+      id: [''],
+      nome: [''],
+      email: [''],
+      serie: [''],
+      periodo: [''],
+      nota: [''],
+      situacao: [''],
 
     });
 
@@ -34,23 +34,23 @@ export class AlunoComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.loadClients();
+    this.loadAluno();
   }
 
-  loadClients() {
+  loadAluno() {
     this.alunoService.getAluno().subscribe(
       {
-        next: data => this.aluno = data,
+        next: data => this.alunos = data,
         error: msg => console.log("Erro ao chamar o endpont " + msg)
       }
     )
   }
 
-  Salvar() {
-    this.alunoService.Salvar(this.formGroupClient.value).subscribe(
+  salvar() {
+    this.alunoService.salvar(this.formGroupClient.value).subscribe(
       {
         next: data => {
-          this.aluno.push(data);
+          this.alunos.push(data);
           this.formGroupClient.reset();
         }
       }
