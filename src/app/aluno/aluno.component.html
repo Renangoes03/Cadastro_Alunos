@@ -1,0 +1,43 @@
+<div class="row">
+   <div class="col-8 m-auto">
+      <form  [formGroup]="formGroupClient">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nome: </label>
+          <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email: </label>
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-primary"  (click)="Salvar()">Salvar</button> 
+        </div>
+      </form>
+   </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Série</th>
+        <th scope="col">Período</th>
+        <th scope="col">Nota</th>
+        <th scope="col">Situação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Aluno of aluno">
+        <th scope="row">{{Aluno.ID}}</th>
+        <td>{{Aluno.Nome}}</td>
+        <td>{{Aluno.Email}}</td>
+        <td>{{Aluno.Serie}}</td>
+        <td>{{Aluno.Periodo}}</td>
+        <td>{{Aluno.Nota}}</td>
+        <td>{{Aluno.Situacao}}</td>
+      </tr>
+    </tbody>
+</table>

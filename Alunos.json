@@ -1,0 +1,9 @@
+{
+  "Alunos": [
+    { "ID" : 1, "Nome" : "Renan", "Email" : "renan@gmail.com", "Serie" : "Ensino Superior", "Periodo" : "Manhã", "Nota" : "6", "Situação" : "Em Curso" },
+    { "ID" : 2, "Nome" : "", "Email" : "", "Serie" : "", "Periodo" : "", "Nota" : "", "Situação" : "" },
+    { "ID" : 3, "Nome" : "", "Email" : "", "Serie" : "", "Periodo" : "", "Nota" : "", "Situação" : "" },
+    { "ID" : 4, "Nome" : "", "Email" : "", "Serie" : "", "Periodo" : "", "Nota" : "", "Situação" : "" },
+    { "ID" : 5, "Nome" : "", "Email" : "", "Serie" : "", "Periodo" : "", "Nota" : "", "Situação" : "" }
+  ]
+}
